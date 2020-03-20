@@ -82,6 +82,7 @@
 
 </div>
 </fieldset>
+<!-- 사진은 주소값이 너무 길어서 post 방식으로 enctype="multipart/form-data" 꼮 넣기 -->
 <form action="photostep1" method="post" enctype="multipart/form-data">
 
   <div class="uploadform_div_parent">

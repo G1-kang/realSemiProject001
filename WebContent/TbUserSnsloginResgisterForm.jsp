@@ -148,8 +148,8 @@ function appendDay(){
 	
 	}else if(snsdto.getUserGender().equals("female") ||snsdto.getUserGender().equals("male")){
 %>
-				<input type="radio" name="userGender"  value="FEMALE"  <%=snsdto.getUserGender().equals("female")?"checked":"disabled"%>/> 여
-				<input type="radio" name="userGender" value="MALE" <%=snsdto.getUserGender().equals("male")?"checked":"disabled"%>/> 남
+				<input type="radio" name="userGender"  value="FEMALE"  <%=snsdto.getUserGender().equals("female")?"checked":""%>/> 여
+				<input type="radio" name="userGender" value="MALE" <%=snsdto.getUserGender().equals("male")?"checked":""%>/> 남
 
 
 					

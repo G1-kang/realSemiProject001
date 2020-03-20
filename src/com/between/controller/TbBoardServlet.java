@@ -45,7 +45,7 @@ public class TbBoardServlet extends HttpServlet {
 
 			Criteria cri = new Criteria();//받은 페이지번호로 페이지를 지정할 객체
 			
-			// 페이지 번호가 없는 경우 == 처음 게시판을 누를 경우, 1페이지
+ 			// 페이지 번호가 없는 경우 == 처음 게시판을 누를 경우, 1페이지
 			if(paramPage==null) {
 				cri.setPage(1); // 페이지 번호를 지정
 				cri.setPageCount(10); // 페이지에서 보여줄 게시글 갯수를 지정
@@ -234,6 +234,7 @@ public class TbBoardServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		doGet(request, response);
 	}
+	//공지
 	public String checkStatus(String userStatus) {
 		String boardType ;
 		if(userStatus.equals("ADMIN")) {

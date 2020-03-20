@@ -5,12 +5,12 @@ public class PageMaker {
     private Criteria cri;
     private int totalCount;
     private int startPage;
-    private int endPage;
+    private int endPage;	//보여지는 페이징의 마지막 번호
     private boolean prev;
     private boolean next;
-    private int displayPageNum = 5;
+    private int displayPageNum = 5; //하단에 보여줄 페이징 갯수 < 1 2 3 4 >  <1 2 >
     
-    private int tempEndPage;
+    private int tempEndPage;//마지막으로  가는 버튼을 만들기 위한 것, 
     
     public Criteria getCri() {
         return cri;
@@ -25,7 +25,7 @@ public class PageMaker {
         this.totalCount = totalCount;
         calcData();
     }
-    
+    //위에서 보여준 모든 변수들을 계산해주는것.
     private void calcData() {
         
         endPage = (int) (Math.ceil(cri.getPage() / (double) displayPageNum) * displayPageNum);
@@ -40,8 +40,8 @@ public class PageMaker {
             endPage = tempEndPage;
         }
  
-        prev = startPage == 1 ? false : true;
-        next = endPage * cri.getPageCount() < totalCount ? true : false;
+        prev = startPage == 1 ? false : true; // 첫 페이지일 경우 이전페이지로 가는 버튼 사리짐
+        next = endPage * cri.getPageCount() < totalCount ? true : false; //tempendpage와 동일한 번호를 계산해서... 
         
         
 //        System.out.println("startPage : "+startPage);

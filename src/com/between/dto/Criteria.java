@@ -16,6 +16,7 @@ public class Criteria {
     public int getPage() {
         return page;
     }
+    //지금 보는 페이지가 뭔지 알려주는놈
     public void setPage(int page) {
         if(page <= 0) {
             this.page = 1;
@@ -23,6 +24,7 @@ public class Criteria {
             this.page = page;
         }
     }
+    //확장성을 고려해서 10개 넣어준놈
     public int getPageCount() {
         return pageCount;
     }
